@@ -1,2 +1,2 @@
 # AutoNotifier
-C# desktop app to automatically fire custom notifications.
+C# desktop app to automatically fire custom notifications on Windows.

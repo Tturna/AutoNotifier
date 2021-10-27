@@ -28,14 +28,6 @@ namespace AutoNotifier
             public string headerText { get; set; }
             public string bottomText { get; set; }
             public string[] eventHours { get; set; }
-
-            //public NotificationEvent(string headerText, string bottomText, string[] eventHours)
-            //{
-            //    this.id = 0;
-            //    this.headerText = headerText;
-            //    this.bottomText = bottomText;
-            //    this.eventHours = eventHours;
-            //}
         }
 
         // Declare the ContextMenuStrip control.
@@ -78,6 +70,13 @@ namespace AutoNotifier
             // Hide the window if there are events
             // Otherwise show it so the user can more easily add events
             if (hideWindow) HideControl();
+
+            // Send notification telling the program started
+            TriggerNotification(new NotificationEvent
+            {
+                headerText = "AutoNotifier Started",
+                bottomText = "You're a cunt."
+            });
         }
 
         #region Callbacks
@@ -89,6 +88,16 @@ namespace AutoNotifier
         private void bt_addEvent_Click(object sender, EventArgs e)
         {
             addEventForm.Show();
+        }
+
+        private void bt_clearevents_Click(object sender, EventArgs e)
+        {
+            ClearEventsAndFocus();
+        }
+
+        private void bt_quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void MainForm_Load(object sender, EventArgs e) { }
@@ -131,7 +140,7 @@ namespace AutoNotifier
                         {
                             Console.WriteLine("Checking event " + ne.id.ToString());
                             // Check if the event is already triggered
-                            if (triggeredEvents.Contains(ne.id)) continue;
+                            //if (triggeredEvents.Contains(ne.id)) continue;
 
                             // Find which event should be triggered next
                             foreach (string s in ne.eventHours)
@@ -162,6 +171,7 @@ namespace AutoNotifier
                         if (minutes == 0)
                         {
                             checkTomorrow = true;
+                            triggeredEvents.Clear();
                         }
                         else break;
                     }
@@ -196,6 +206,7 @@ namespace AutoNotifier
             Console.WriteLine(string.Format("{0} ({1})", notification.headerText, DateTime.Now.TimeOfDay.ToString().Substring(0, 8)));
 
             new ToastContentBuilder()
+                .AddArgument("conversationId", 9813)
                 .AddText(notification.headerText)
                 .AddText(notification.bottomText)
                 .AddAppLogoOverride(new Uri("C:/Users/eemel/Desktop/kekw.ico"))
@@ -245,8 +256,9 @@ namespace AutoNotifier
             }
 
             // Populate the ContextMenuStrip control with its default items.
-            trayContextMenuStrip.Items.Add("Quit", null, (sender, e) => Application.Exit());
+            trayContextMenuStrip.Items.Add("Open", null, (sender, e) => ShowControl());
             trayContextMenuStrip.Items.Add("Clear Events", null, (sender, e) => ClearEventsAndFocus());
+            trayContextMenuStrip.Items.Add("Quit", null, (sender, e) => Application.Exit());
 
             // Set Cancel to false. 
             // It is optimized to true based on empty entry.
@@ -279,7 +291,7 @@ namespace AutoNotifier
 
         void ClearEventsAndFocus()
         {
-            events = new List<NotificationEvent>();
+            events.Clear();
             ShowControl();
         }
 
