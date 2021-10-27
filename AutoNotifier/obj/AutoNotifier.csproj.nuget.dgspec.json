@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj": {}
+    "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj": {}
   },
   "projects": {
-    "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj": {
+    "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
+        "projectUniqueName": "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
         "projectName": "AutoNotifier",
-        "projectPath": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
+        "projectPath": "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
         "packagesPath": "C:\\Users\\eemel\\.nuget\\packages\\",
-        "outputPath": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\obj\\",
+        "outputPath": "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -37,6 +37,10 @@
             "Microsoft.Toolkit.Uwp.Notifications": {
               "target": "Package",
               "version": "[7.1.1, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           }
         }

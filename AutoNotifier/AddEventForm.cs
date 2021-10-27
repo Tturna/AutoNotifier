@@ -21,7 +21,7 @@ namespace AutoNotifier
 
         private void bt_apply_Click(object sender, EventArgs e)
         {
-            mainForm.AddEventAndRestart(lb_header.Text, lb_bottom.Text, clb_eventHours.CheckedItems);
+            mainForm.AddEventAndRestart(tb_header.Text, tb_bottom.Text, clb_eventHours.CheckedItems);
             Hide();
         }
     }

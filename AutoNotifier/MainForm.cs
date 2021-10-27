@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,18 +24,18 @@ namespace AutoNotifier
 
         public class NotificationEvent
         {
-            public int id;
-            public string headerText;
-            public string bottomText;
-            public string[] eventHours;
+            public int id { get; set; }
+            public string headerText { get; set; }
+            public string bottomText { get; set; }
+            public string[] eventHours { get; set; }
 
-            public NotificationEvent(string headerText, string bottomText, string[] eventHours)
-            {
-                this.id = 0;
-                this.headerText = headerText;
-                this.bottomText = bottomText;
-                this.eventHours = eventHours;
-            }
+            //public NotificationEvent(string headerText, string bottomText, string[] eventHours)
+            //{
+            //    this.id = 0;
+            //    this.headerText = headerText;
+            //    this.bottomText = bottomText;
+            //    this.eventHours = eventHours;
+            //}
         }
 
         // Declare the ContextMenuStrip control.
@@ -50,7 +52,17 @@ namespace AutoNotifier
             addEventForm = new AddEventForm();
             addEventForm.mainForm = this;
 
-            // Create a cancellation token and start recurring task
+            bool hideWindow = false;
+
+            // Load events from JSON
+            string jsonString = File.ReadAllText("events.json");
+            if (jsonString.Length > 3)
+            {
+                events = JsonSerializer.Deserialize<List<NotificationEvent>>(jsonString);
+                hideWindow = true;
+            }
+
+            // Create a cancellation token and start looping through events
             cancelTokenSource = new CancellationTokenSource();
             LoopNotifications(cancelTokenSource.Token);
 
@@ -62,6 +74,10 @@ namespace AutoNotifier
             trayContextMenuStrip.Opening += new CancelEventHandler(cms_Opening);
 
             notifyIcon1.ContextMenuStrip = trayContextMenuStrip;
+
+            // Hide the window if there are events
+            // Otherwise show it so the user can more easily add events
+            if (hideWindow) HideControl();
         }
 
         #region Callbacks
@@ -75,10 +91,7 @@ namespace AutoNotifier
             addEventForm.Show();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            HideControl();
-        }
+        private void MainForm_Load(object sender, EventArgs e) { }
 
         private void MainForm_Deactivate(object sender, EventArgs e)
         {
@@ -94,7 +107,11 @@ namespace AutoNotifier
 
         void LoopNotifications(CancellationToken cancelToken)
         {
-            if (events == null ||events.Count == 0) return;
+            if (events == null || events.Count == 0)
+            {
+                Console.WriteLine("No events to trigger.");
+                return;
+            }
 
             Task.Run(async () =>
             {
@@ -106,11 +123,13 @@ namespace AutoNotifier
                     bool checkTomorrow = false;
 
                     // Run twice if the next event starts in the next day
+                    Console.WriteLine("Searching for next event...");
                     for (int i = 0; i < 2; i++)
                     {
                         // Iterate through all the events
                         foreach (NotificationEvent ne in events)
                         {
+                            Console.WriteLine("Checking event " + ne.id.ToString());
                             // Check if the event is already triggered
                             if (triggeredEvents.Contains(ne.id)) continue;
 
@@ -119,15 +138,21 @@ namespace AutoNotifier
                             {
                                 DateTime hour = DateTime.Parse(s);
                                 if (checkTomorrow) hour = hour.AddDays(1);
+                                Console.WriteLine("Checking hour: " + hour.ToString());
 
                                 int result = DateTime.Compare(DateTime.Now, hour);
+                                Console.WriteLine("Result: " + result.ToString());
                                 double totalMinutes = hour.Subtract(DateTime.Now).TotalMinutes;
 
+                                Console.WriteLine("result == -1 : " + (result == -1).ToString());
+                                Console.WriteLine("minutes == 0 : " + (minutes == 0).ToString());
+                                Console.WriteLine("totalMinutes < minutes : " + (totalMinutes < minutes).ToString());
                                 if (result == -1 && (minutes == 0 || totalMinutes < minutes))
                                 {
                                     minutes = totalMinutes;
                                     triggerHour = s;
                                     nextEvent = ne;
+                                    Console.WriteLine("Found potential next event!");
                                 }
                             }
                         }
@@ -221,27 +246,49 @@ namespace AutoNotifier
 
             // Populate the ContextMenuStrip control with its default items.
             trayContextMenuStrip.Items.Add("Quit", null, (sender, e) => Application.Exit());
+            trayContextMenuStrip.Items.Add("Clear Events", null, (sender, e) => ClearEventsAndFocus());
 
             // Set Cancel to false. 
             // It is optimized to true based on empty entry.
             e.Cancel = false;
         }
 
-        public void AddEventAndRestart(string headerText, string bottomText, CheckedListBox.CheckedItemCollection eventHours)
+        public void AddEventAndRestart(string header, string bottom, CheckedListBox.CheckedItemCollection eventTriggerHours)
         {
             // Generate an array of event trigger hours
-            string[] eHours = new string[eventHours.Count];
-            for (int i = 0; i < eventHours.Count; i++)
+            string[] eHours = new string[eventTriggerHours.Count];
+            for (int i = 0; i < eventTriggerHours.Count; i++)
             {
-                eHours[i] = eventHours[i].ToString();
+                eHours[i] = eventTriggerHours[i].ToString();
             }
 
             // Add event to list
-            events.Add(new NotificationEvent(headerText, bottomText, eHours));
+            events.Add(new NotificationEvent
+            {
+                id = events.Count,
+                headerText = header,
+                bottomText = bottom,
+                eventHours = eHours
+            });
 
-            // (re)generate a list of key/value pairs
+            // Save events in a JSON
+            SaveJSON();
 
             LoopNotifications(cancelTokenSource.Token);
+        }
+
+        void ClearEventsAndFocus()
+        {
+            events = new List<NotificationEvent>();
+            ShowControl();
+        }
+
+        void SaveJSON()
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = JsonSerializer.Serialize(events, options);
+            File.WriteAllText("events.json", jsonString);
+            Console.WriteLine("Events saved in events.json");
         }
     }
 }

@@ -13,3 +13,27 @@ D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\bin\De
 D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.CopyComplete
 D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.MainForm.resources
 D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.AddEventForm.resources
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\AutoNotifier.exe.config
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\AutoNotifier.exe
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\AutoNotifier.pdb
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.Buffers.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.Memory.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.Numerics.Vectors.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.Text.Encodings.Web.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.Text.Json.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\bin\Debug\System.ValueTuple.dll
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.AssemblyReference.cache
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.exe.config
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.AddEventForm.resources
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.MainForm.resources
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.Properties.Resources.resources
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.GenerateResource.cache
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.CoreCompileInputs.cache
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.CopyComplete
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.exe
+D:\Folders\Stuffs\Github Repositories\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.pdb

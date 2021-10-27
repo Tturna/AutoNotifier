@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -126,6 +141,61 @@
           "build/_._": {}
         }
       },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {}
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.WindowsRuntime/4.6.0": {
         "type": "package",
         "compile": {
@@ -151,6 +221,62 @@
         },
         "build": {
           "build/net461/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        }
+      },
+      "System.Text.Json/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
+          "System.Text.Encodings.Web": "5.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Json.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -167,6 +293,21 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -291,6 +432,61 @@
           "build/_._": {}
         }
       },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {}
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.WindowsRuntime/4.6.0": {
         "type": "package",
         "compile": {
@@ -316,6 +512,62 @@
         },
         "build": {
           "build/net461/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        }
+      },
+      "System.Text.Json/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
+          "System.Text.Encodings.Web": "5.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Json.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -332,6 +584,21 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -456,6 +723,61 @@
           "build/_._": {}
         }
       },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {}
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.WindowsRuntime/4.6.0": {
         "type": "package",
         "compile": {
@@ -481,6 +803,62 @@
         },
         "build": {
           "build/net461/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        }
+      },
+      "System.Text.Json/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
+          "System.Text.Encodings.Web": "5.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Json.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -497,6 +875,21 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -621,6 +1014,61 @@
           "build/_._": {}
         }
       },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {}
+        }
+      },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.WindowsRuntime/4.6.0": {
         "type": "package",
         "compile": {
@@ -646,6 +1094,62 @@
         },
         "build": {
           "build/net461/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Encodings.Web.dll": {}
+        }
+      },
+      "System.Text.Json/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
+          "System.Text.Encodings.Web": "5.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Text.Json.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -663,6 +1167,28 @@
     }
   },
   "libraries": {
+    "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
+      "sha512": "W8DPQjkMScOMTtJbPwmPyj9c3zYSFGawDW3jwlBOOsnY+EzZFLgNQ/UMkK35JmkNOVPdCyPr2Tw7Vv9N+KA3ZQ==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
       "sha512": "7D2TMufjGiowmt0E941kVoTIS+GTNzaPopuzM1/1LSaJAdJdBrVP0SkZW7AgDd0a2U1DjsIeaKG1wxGVBNLDMw==",
       "type": "package",
@@ -1281,6 +1807,139 @@
         "ref/netstandard2.0/en/Windows.Web.Http.Diagnostics.HttpDiagnosticsContract.xml"
       ]
     },
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "type": "package",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "type": "package",
+      "path": "system.memory/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "sha512": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Runtime.WindowsRuntime/4.6.0": {
       "sha512": "IWrs1TmbxP65ZZjIglNyvDkFNoV5q2Pofg5WO7I8RKQOpLdFprQSh3xesOoClBqR4JHr4nEB1Xk1MqLPW1jPuQ==",
       "type": "package",
@@ -1421,6 +2080,91 @@
         "version.txt"
       ]
     },
+    "System.Text.Encodings.Web/5.0.1": {
+      "sha512": "KmJ+CJXizDofbq6mpqDoRRLcxgOd2z9X3XoFNULSbvbqVRZkFX3istvr+MUjL6Zw1RT+RNdoI4GYidIINtgvqQ==",
+      "type": "package",
+      "path": "system.text.encodings.web/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Encodings.Web.dll",
+        "lib/net461/System.Text.Encodings.Web.xml",
+        "lib/netcoreapp3.0/System.Text.Encodings.Web.dll",
+        "lib/netcoreapp3.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.1/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.1/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.5.0.1.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Text.Json/5.0.2": {
+      "sha512": "I47dVIGiV6SfAyppphxqupertT/5oZkYLDCX6vC3HpOI4ZLjyoKAreUoem2ie6G0RbRuFrlqz/PcTQjfb2DOfQ==",
+      "type": "package",
+      "path": "system.text.json/5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.5.0.2.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.ValueTuple/4.5.0": {
       "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
@@ -1468,7 +2212,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Microsoft.Toolkit.Uwp.Notifications >= 7.1.1"
+      "Microsoft.Toolkit.Uwp.Notifications >= 7.1.1",
+      "System.Text.Json >= 5.0.2"
     ]
   },
   "packageFolders": {
@@ -1477,11 +2222,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
+      "projectUniqueName": "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
       "projectName": "AutoNotifier",
-      "projectPath": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
+      "projectPath": "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
       "packagesPath": "C:\\Users\\eemel\\.nuget\\packages\\",
-      "outputPath": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\obj\\",
+      "outputPath": "D:\\Folders\\Stuffs\\Github Repositories\\AutoNotifier\\AutoNotifier\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1507,6 +2252,10 @@
           "Microsoft.Toolkit.Uwp.Notifications": {
             "target": "Package",
             "version": "[7.1.1, )"
+          },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[5.0.2, )"
           }
         }
       }
