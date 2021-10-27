@@ -1,0 +1,6 @@
+﻿To Do:
+
+
+
+- Saving notification events (JSON?)
+- Loading notification events

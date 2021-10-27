@@ -1,0 +1,15 @@
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\bin\Debug\AutoNotifier.exe.config
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\bin\Debug\AutoNotifier.exe
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\bin\Debug\AutoNotifier.pdb
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.AssemblyReference.cache
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.Properties.Resources.resources
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.GenerateResource.cache
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.CoreCompileInputs.cache
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.exe
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.pdb
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\bin\Debug\System.ValueTuple.dll
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.csproj.CopyComplete
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.MainForm.resources
+D:\Folders\Projects\CSharpProjects\AutoNotifier\AutoNotifier\AutoNotifier\obj\Debug\AutoNotifier.AddEventForm.resources

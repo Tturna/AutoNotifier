@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj": {}
+  },
+  "projects": {
+    "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
+        "projectName": "AutoNotifier",
+        "projectPath": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\AutoNotifier.csproj",
+        "packagesPath": "C:\\Users\\eemel\\.nuget\\packages\\",
+        "outputPath": "D:\\Folders\\Projects\\CSharpProjects\\AutoNotifier\\AutoNotifier\\AutoNotifier\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\eemel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.Toolkit.Uwp.Notifications": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
